@@ -8,9 +8,142 @@
     <meta name="description"
         content="Portfolio of Roopesh Sankar, a WordPress Developer with 3.5 years of experience specializing in WordPress development.">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" as="image" href="assets/images/banner.webp" fetchpriority="high">
+    <style>
+        :root {
+            --c-dark-red: #540b0e;
+            --c-red: #9e2a2b;
+            --c-orange: #e09f3e;
+            --c-yellow: #fff3b0;
+            --c-teal: #335c67;
+            --bg-color: #0b0c10;
+            --text-main: #ffffff;
+            --text-muted: rgba(255, 255, 255, 0.6);
+            --text-yellow: #fff3b0;
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-blur: 32px;
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        #loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0b0c10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        #loader-wrapper.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 4rem;
+        }
+
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            background: var(--bg-color);
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            width: 60%;
+            height: 100vh;
+        }
+
+        .hero-bg-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0.8;
+        }
+
+        .hero-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, var(--bg-color) 0%, rgba(11, 12, 16, 0.8) 20%, transparent 100%), linear-gradient(0deg, var(--bg-color) 0%, transparent 30%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            padding-bottom: 5rem;
+        }
+
+        .hero-titles {
+            max-width: 800px;
+            margin-top: 5rem;
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: clamp(4rem, 8vw, 7.5rem);
+            font-weight: 800;
+            line-height: 0.95;
+            letter-spacing: -2px;
+            color: #ffffff;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="style.css">
+    </noscript>
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
@@ -35,7 +168,7 @@
                 <!-- Image on the right side melting into background -->
                 <div class="hero-image-wrapper">
                     <img src="assets/images/banner.webp" alt="Roopesh Sankar Background" class="hero-bg-img"
-                        onerror="this.src='assets/images/banner.webp'">
+                        fetchpriority="high">
                     <div class="hero-image-overlay"></div>
                 </div>
             </div>
@@ -123,7 +256,7 @@
                 <!-- Left: Image Box -->
                 <div class="summary-image-box">
                     <img src="assets/images/about-me.webp" alt="About Roopesh Sankar" class="summary-img"
-                        onerror="this.src='./assets/images/about-me.png'">
+                        loading="lazy">
 
                     <!-- Vertical Skill Bar -->
                     <div class="skill-vertical-bar">
@@ -348,8 +481,7 @@
     <!-- Footer Section -->
     <footer class="site-footer">
         <div class="footer-background">
-            <img src="assets/images/footer-image.webp" alt="Footer Background" class="footer-bg-img"
-                onerror="this.src='./assets/images/20250518_183118.jpg.jpeg'">
+            <img src="assets/images/footer-image.webp" alt="Footer Background" class="footer-bg-img" loading="lazy">
             <div class="footer-overlay"></div>
         </div>
 
@@ -372,7 +504,7 @@
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                     <circle cx="12" cy="7" r="4"></circle>
                 </svg>
-                Home
+                <span class="text">Home</span>
             </a>
             <a href="#summary" class="nav-item">
                 <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
@@ -382,7 +514,7 @@
                     <line x1="8" y1="2" x2="8" y2="6"></line>
                     <line x1="3" y1="10" x2="21" y2="10"></line>
                 </svg>
-                Summary
+                <span class="text">Summary</span>
             </a>
             <a href="#experience" class="nav-item">
                 <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
@@ -393,14 +525,14 @@
                     <line x1="16" y1="17" x2="8" y2="17"></line>
                     <polyline points="10 9 9 9 8 9"></polyline>
                 </svg>
-                Experience
+                <span class="text">Experience</span>
             </a>
             <a href="#skills" class="nav-item">
                 <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
                     stroke-linecap="round" stroke-linejoin="round">
                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                 </svg>
-                Skills
+                <span class="text">Skills</span>
             </a>
         </div>
     </nav>
