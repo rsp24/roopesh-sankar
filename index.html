@@ -328,7 +328,10 @@
                             plugin development, widget creation, and building websites using page builders such as
                             Elementor.</span> I enjoy turning ideas into well-structured websites that are visually
                         appealing,
-                        efficient, and easy to manage.
+                        efficient, and easy to manage. 
+                    </p>
+                    <p class="summary-text text-muted">
+                        Beyond the screen, I have a deep passion for <span class="text-main"><span class="text-yellow">movies</span></span> and immersive <span class="text-main"><span class="text-yellow">story-driven RPG games</span></span>, which often fuel my creativity and eye for detail.
                     </p>
 
                     <div class="summary-stats">
@@ -358,7 +361,7 @@
             <div class="bento-grid">
                 <!-- Project 1: TerraConnect -->
                 <a href="https://terraconnect.io/" target="_blank" class="project-card bento-large">
-                    <div class="project-tag">WordPress</div>
+                    <div class="project-tag">WordPress, Elementor</div>
                     <div class="project-preview">
                         <img src="assets/images/terraconnect.webp" alt="TerraConnect Preview" loading="lazy">
                         <div class="project-overlay">
@@ -373,7 +376,7 @@
 
                 <!-- Project 2: CAD Connect -->
                 <a href="http://cadconnect.in/" target="_blank" class="project-card">
-                    <div class="project-tag">WordPress</div>
+                    <div class="project-tag">WordPress, HTML/CSS</div>
                     <div class="project-preview">
                         <img src="assets/images/cadconnect.webp" alt="CAD Connect Preview" loading="lazy">
                         <div class="project-overlay">
@@ -388,7 +391,7 @@
 
                 <!-- Project 3: CoreMech -->
                 <a href="https://coremech.com.au/" target="_blank" class="project-card">
-                    <div class="project-tag">WordPress</div>
+                    <div class="project-tag">WordPress, Elementor</div>
                     <div class="project-preview">
                         <img src="assets/images/coremech.webp" alt="CoreMech Preview" loading="lazy">
                         <div class="project-overlay">
@@ -402,7 +405,7 @@
                 </a>
 
                 <!-- Project 4: CaveCastle -->
-                <a href="https://cavecastle.co.in/" target="_blank" class="project-card bento-wide">
+                <a href="https://cavecastle.co.in/" target="_blank" class="project-card">
                     <div class="project-tag tag-custom">HTML / CSS / JS</div>
                     <div class="project-preview">
                         <img src="assets/images/cavecastle.webp" alt="CaveCastle Preview" loading="lazy">
@@ -417,7 +420,7 @@
                 </a>
 
                 <!-- Project 5: AuxinBuilders -->
-                <a href="http://auxinbuilders.in/" target="_blank" class="project-card bento-wide">
+                <a href="http://auxinbuilders.in/" target="_blank" class="project-card">
                     <div class="project-tag tag-custom">HTML / CSS / JS</div>
                     <div class="project-preview">
                         <img src="assets/images/auxin.webp" alt="Auxin Builders Preview" loading="lazy">
@@ -430,8 +433,53 @@
                         <p>http://auxinbuilders.in/</p>
                     </div>
                 </a>
+                <!-- Nuventure Connect website -->
+                <a href="https://nuventureconnect.com/" target="_blank" class="project-card">
+                    <div class="project-tag tag-custom">HTML / CSS / JS</div>
+                    <div class="project-preview">
+                        <img src="assets/images/nuventure-connect.webp" alt="Nuventure Connect Preview" loading="lazy">
+                        <div class="project-overlay">
+                            <span>Visit Site ↗</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Nuventure Connect</h3>
+                        <p>https://nuventureconnect.com/</p>
+                    </div>
+                </a>
             </div>
         </section>
+        
+        <section id="interests" class="interests-section container">
+            <div class="section-label">
+                <span class="status-dot"></span> Interests
+            </div>
+            <h2 class="section-title">What I Love</h2>
+            <p class="summary-text text-muted" style="max-width: 600px; margin-bottom: 4rem;">
+                Beyond code, here's what keeps me inspired and entertained.
+            </p>
+
+            <div class="interests-grid">
+                <!-- Movies -->
+                <div class="interest-card" onclick="openModal('moviesModal')">
+                    <img src="assets/images/banner_movies.png" alt="Movies Banner" class="interest-bg">
+                    <div class="interest-content">
+                        <h3>Movies</h3>
+                        <p>View Favorites</p>
+                    </div>
+                </div>
+
+                <!-- Gaming -->
+                <div class="interest-card" onclick="openModal('gamingModal')">
+                    <img src="assets/images/banner_gaming.png" alt="Gaming Banner" class="interest-bg">
+                    <div class="interest-content">
+                        <h3>Gaming</h3>
+                        <p>View Favorites</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="skills" class="skills-section container">
             <div class="section-label">
                 <span class="status-dot"></span> Skills
@@ -493,9 +541,9 @@
 
                 <div class="skill-card-new">
                     <div class="skill-icon-new">
-                        <i class="fa fa-solid fa-puzzle-piece fa-2x"></i>
+                        <i class="fa fa-solid fa-list-check fa-2x"></i>
                     </div>
-                    <h3>Wordpress Widget Development</h3>
+                    <h3>Manual Testing</h3>
                 </div>
             </div>
         </section>
@@ -552,6 +600,17 @@
                 </svg>
                 <span class="text">Experience</span>
             </a>
+            <a href="#interests" class="nav-item">
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="6" y1="12" x2="10" y2="12"></line>
+                    <line x1="8" y1="10" x2="8" y2="14"></line>
+                    <line x1="15" y1="13" x2="15.01" y2="13"></line>
+                    <line x1="18" y1="11" x2="18.01" y2="11"></line>
+                    <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                </svg>
+                <span class="text">Interests</span>
+            </a>
             <a href="#skills" class="nav-item">
                 <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
                     stroke-linecap="round" stroke-linejoin="round">
@@ -561,6 +620,51 @@
             </a>
         </div>
     </nav>
+
+    <!-- Modals -->
+    <div id="moviesModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('moviesModal')">&times;</button>
+            <h2 class="modal-title">Favorite Movies</h2>
+            <p class="modal-desc">A few of my all-time favorite cinematic experiences that left a lasting impact on me.</p>
+            <div class="modal-grid">
+                <div class="modal-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNjllNGZiYjAtMjVjMy00ZGI4LThiZDAtYzFlOGRkY2E0NDA3XkEyXkFqcGc@._V1_.jpg" alt="Manichithrathazhu">
+                    <h4>Manichithrathazhu</h4>
+                </div>
+                <div class="modal-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg" alt="Avengers Endgame">
+                    <h4>Avengers: Endgame</h4>
+                </div>
+                <div class="modal-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BYzVkNmM1Y2MtYmI4Yi00NDBhLTljZTYtY2JkM2M0MmMwMDBlXkEyXkFqcGc@._V1_.jpg" alt="KGF">
+                    <h4>K.G.F</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gamingModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('gamingModal')">&times;</button>
+            <h2 class="modal-title">Favorite Games</h2>
+            <p class="modal-desc">I am a huge fan of immersive story-driven action-adventure and RPG games.</p>
+            <div class="modal-grid">
+                <div class="modal-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNzRhZjRhNTAtMGM5MS00YWRkLWE0ZmQtY2M2MjM2NmM4NTI5XkEyXkFqcGc@._V1_.jpg" alt="Red Dead Redemption">
+                    <h4>Red Dead Redemption 2</h4>
+                </div>
+                <div class="modal-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDdiNTBhMzgtZjg5My00N2EyLTg5NmYtODZhMTNiY2RhZDhjXkEyXkFqcGc@._V1_.jpg" alt="The Last of Us">
+                    <h4>The Last of Us</h4>
+                </div>
+                <div class="modal-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNjJiNTFhY2QtNzZkYi00MDNiLWEzNGEtNWE1NzBkOWIxNmY5XkEyXkFqcGc@._V1_.jpg" alt="God of War">
+                    <h4>God of War</h4>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
